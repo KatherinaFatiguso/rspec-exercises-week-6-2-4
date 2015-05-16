@@ -26,7 +26,7 @@ RSpec.describe Product do
 
     context "GST not exempt" do
       let(:gst_exempt) { false }
-      it { is_expected.to eq(price/10.0) }
+      it { is_expected.to eq(price/10.0) } #sprintf("%.2f",@gst)
     end
   end
 

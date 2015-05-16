@@ -71,12 +71,12 @@ RSpec.describe ShoppingCart do
       end
     end
 
-    context 'an empty cart' do
+    context 'trying to remove an object from an empty cart' do
 
       describe '#remove' do
         subject { cart.remove(product1) }
         subject { cart.items }
-        it { is_expected.to eq([]) } #delete function in array returns nil, not false (rubydoc)
+        it { is_expected.to eq([]) } #back to empty array
       end
     end
   end
